@@ -1,0 +1,64 @@
+SCP Commands:
+
+In Local systems:
+
+scp is a command we can transfer data from one system to other.
+
+scp -r foldername(shqalatest) username of clientsystem(usha)@192.168.0.17:/home/(destination of the clientsystem)
+
+scp -r shqalatest usha@192.168.0.17:/home/ 
+
+
+
+In Servers:
+
+copy files from server to local system:
+
+===== scp root@138.201.89.4:/mnt/home/exceloid/SHNEWDELETEDATA/shqadeletedata.tar.gz . =====
+
+In local system we need to run above command..for eg enter into destination folder and
+type scp server@ip:/home/location/of/dumpfile .
+
+In test server:
+
+=====cd akbasics$ scp openbravo@195.201.23.99:/home/openbravo/OB_Sh/DB_Backup/2018-05-16.pgdump . =====
+
+root@138.201.89.4(server)
+passwd:c3UhiS7dL6RaiE
+
+/mnt/home/exceloid/SHNEWDELETEDATA(pwd in server)
+
+shqadeletedata.tar.gz (file name)
+
+copy files from local system to server:
+
+=====cd Downloads$ scp apache-tomcat-7.0.54.tar.gz openbravo@195.201.23.99:/home/openbravo =====
+
+FOR PORT CONNECTION IN SERVERS:
+
+FILES FROM LOCAL TO SERVER:
+
+If the port is different in servers then we can use -P2222
+
+===== scp -P 2222 20180504.dmp openbravo@78.47.195.60:/home/openbravo/OB_DB ====
+
+FILES FROM SERVER TO LOCAL:
+
+===== scp -P 2222  openbravo@78.47.195.60:/home/openbravo/OB_DB/2018-05-16.pgdump . =====
+
+
+copy files from server to local system:
+with .pem file: 
+
+===== cd sh$ scp -i shgobadmin.pem shgobadmin@52.66.5.156:/home/-----/----/---- . =====
+
+
+For Elecmec test server (or) any server with pem file:
+
+Copy files from local to emtest server:
+
+scp -i elecmec_ob_test\ \(1\).pem  2018-06-12.pgdump ubuntu@emtest.exceloid.com:/home/ubuntu
+
+
+
+

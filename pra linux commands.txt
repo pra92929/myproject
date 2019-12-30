@@ -1,0 +1,9 @@
+netstat -tupln
+
+sudo apt-get --purge autoremove elasticsearch
+
+
+
+aws s3 cp s3://exceloidkellyhopen/2019-05-07.pgdump .
+
+

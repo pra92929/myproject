@@ -1,0 +1,2 @@
+scp -i shgobadmin.pem Analysis-BalanceSheet_Heading_Report.xls.zip shgobadmin@52.66.5.156:/home/shgobadmin/backup/Openbravo-3.0PR15Q3.4/attachments/Analysis_BalanceSHeetAndPL_Templates_Main_3/BalanceSheet_MainTemplate_3 
+

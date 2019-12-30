@@ -1,0 +1,29 @@
+src-db/database/configScript.xml
+     [java] Warning: old value in row not equal to expected one. Table:[AD_MODULE] PK[: 0] Old Value found: http://wiki.openbravo.com/wiki/Release_Notes/3.0PR15Q2.4 Old value expected http://wiki.openbravo.com/wiki/Release_Notes/3.0PR15Q2.1
+     [java] Warning: old value in row not equal to expected one. Table:[AD_MODULE] PK[: 509767E831EA4B39B4839A4EC4A28628] Old Value found: Fixed bug 28430: IDL should import the fiscal name of a business partner Old value expected Fixed issues:
+     [java] 30068: Period error when trying to import a Journal Entry and several calendars exist for same organization
+     [java] 105531 INFO  - Comparing databases to find differences
+     [java] 110450 INFO  - Updating Application Dictionary data...
+     [java] 111310 INFO  - Removing invalid rows.
+     [java] 133477 INFO  - Executed 85 SQL command(s) successfully
+     [java] 133565 INFO  - Recreating Primary Keys
+     [java] 133693 INFO  - Executing oncreatedefault statements for mandatory columns
+
+\database.postupdate.POSTGRE:
+      [sql] Executing commands
+      [sql] Failed to execute:   UPDATE AD_SYSTEM_INFO SET CODE_REVISION=SUBSTR('abort: path 'modules/com.gocoop.apco.sales/src-db/database/sourcedata/AD_MODULE.xml' traverses symbolic link 'modules/com.gocoop.apco.sales'',1,60)
+
+BUILD FAILED
+/home/openbravo/OB_Tsco/SOURCE/FinalOpenbravoERP/build.xml:393: The following error occurred while executing this line:
+/home/openbravo/OB_Tsco/SOURCE/FinalOpenbravoERP/build.xml:426: The following error occurred while executing this line:
+/home/openbravo/OB_Tsco/SOURCE/FinalOpenbravoERP/build.xml:746: The following error occurred while executing this line:
+/home/openbravo/OB_Tsco/SOURCE/FinalOpenbravoERP/src-db/database/build.xml:103: The following error occurred while executing this line:
+/home/openbravo/OB_Tsco/SOURCE/FinalOpenbravoERP/src-db/database/build.xml:194: org.postgresql.util.PSQLException: ERROR: syntax error at or near "modules"
+  Position: 64
+	
+solution:   openbravo@Exceloid-Test:~/OB_Tsco/SOURCE/FinalOpenbravoERP$ rm -rf .hg/
+
+then ant smartbuild -Dlocal=no 
+
+
+

@@ -1,0 +1,9 @@
+scp -i 14.192.19.27 root@10.48.130.11:/root/tsco23052019.11AM.pgdump .
+
+
+scp -i  14.192.19.27 openbravo@10.48.130.11:/opt/FinalOpenbravoERP.06062019.tar.gz .
+
+
+scp tscofile.zip 14.192.19.27 openbravo@10.48.130.11:/home/openbravo/FinalOpenbravoERP/modules/
+
+
